@@ -1,4 +1,4 @@
-|pypi| |actions| |uv| |ruff| |codecov| |downloads| |clinicedc|
+|pypi| |actions| |uv| |ruff| |downloads| |clinicedc|
 
 download-gmail-pdf
 ==================
@@ -58,9 +58,6 @@ After running this, see the management command `import_labs` in clinicedc.
 
 .. |actions| image:: https://github.com/erikvw/download-gmail-pdfs/actions/workflows/build.yml/badge.svg
   :target: https://github.com/erikvw/download-gmail-pdfs/actions/workflows/build.yml
-
-.. |codecov| image:: https://codecov.io/gh/erikvw/download-gmail-pdfs/branch/develop/graph/badge.svg
-  :target: https://codecov.io/gh/erikvw/download-gmail-pdfs
 
 .. |downloads| image:: https://pepy.tech/badge/download-gmail-pdfs
    :target: https://pepy.tech/project/download-gmail-pdfs
