@@ -203,8 +203,8 @@ wheels = [
 ]
 
 [[package]]
-name = "download-gmail-pdf"
-version = "0.1.0"
+name = "download-gmail-pdfs"
+version = "0.2.0"
 source = { editable = "." }
 
 [package.dev-dependencies]
