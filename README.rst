@@ -5,6 +5,8 @@ download-gmail-pdf
 
 Download PDF attachments from one or more Gmail accounts via IMAP.
 
+Source code: https://github.com/erikvw/download-gmail-pdfs
+
 Setup
 -----
 
