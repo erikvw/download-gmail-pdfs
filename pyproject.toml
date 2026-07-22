@@ -1,5 +1,5 @@
 [project]
-name = "download-gmail-pdf"
+name = "download-gmail-pdfs"
 version = "0.1.0"
 description = "Download PDF files from a gmail account"
 authors = [
