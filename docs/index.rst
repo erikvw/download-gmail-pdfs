@@ -8,8 +8,6 @@ download-gmail-pdf
 
 |pypi| |clinicedc|
 
-Source code: https://github.com/erikvw/download-gmail-pdfs
-
 .. include:: ../README.rst
    :start-line: 3
 
