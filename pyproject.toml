@@ -1,6 +1,6 @@
 [project]
 name = "download-gmail-pdfs"
-version = "0.2.2"
+version = "0.2.3"
 description = "Download PDF files from a gmail account"
 authors = [
     { name = "Erik van Widenfelt", email = "ew2789@gmail.com" },
