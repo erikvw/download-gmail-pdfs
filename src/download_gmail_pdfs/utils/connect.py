@@ -2,6 +2,8 @@ import imaplib
 import sys
 import time
 
+from tqdm import tqdm
+
 MAX_RETRIES = 3
 RETRY_DELAY_SECONDS = 10
 
@@ -26,9 +28,9 @@ def reconnect_with_retry(
     msg_index: int,
 ) -> imaplib.IMAP4_SSL:
     for attempt in range(1, MAX_RETRIES + 1):
-        sys.stdout.write(
-            f"\n  Connection lost at message {msg_index} ({original_error}). "
-            f"Retrying in {RETRY_DELAY_SECONDS}s (attempt {attempt}/{MAX_RETRIES}) ...\n"
+        tqdm.write(
+            f"  Connection lost at message {msg_index} ({original_error}). "
+            f"Retrying in {RETRY_DELAY_SECONDS}s (attempt {attempt}/{MAX_RETRIES}) ..."
         )
         time.sleep(RETRY_DELAY_SECONDS)
         try:
@@ -36,7 +38,7 @@ def reconnect_with_retry(
         except (imaplib.IMAP4.error, OSError) as e:
             original_error = e
         else:
-            sys.stdout.write("  Reconnected.\n\n")
+            tqdm.write("  Reconnected.")
             return mail
 
     sys.stderr.write(f"Failed to reconnect after {MAX_RETRIES} attempts.\n")

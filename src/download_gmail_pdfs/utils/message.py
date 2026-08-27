@@ -1,14 +1,15 @@
 import email
-import sys
+
+from tqdm import tqdm
 
 from .file_utils import decode_header_value, get_filename_from_message_part, get_or_rename_path
-from .manifest import load_manifest, make_manifest_key, save_manifest
+from .manifest import make_manifest_key, save_manifest
 
 
 def walk_message_parts(
-    msg_id, msg_data, output_dir, saved: int, skipped: int
+    msg_id, msg_data, output_dir, counts: tuple[int, int], manifest: dict
 ) -> tuple[int, int]:
-    manifest = load_manifest(output_dir)
+    saved, skipped = counts
     msg = email.message_from_bytes(msg_data[0][1])
     message_id = msg.get("Message-ID", f"unknown-{msg_id.decode()}")
     filename_occurrences: dict[str, int] = {}
@@ -41,8 +42,6 @@ def walk_message_parts(
         }
         save_manifest(output_dir, manifest)
 
-        sys.stdout.write(
-            f'  [{saved + 1}] {dest.name}  (subject: "{subject}", date: {date})\n'
-        )
+        tqdm.write(f'  [{saved + 1}] {dest.name}  (subject: "{subject}", date: {date})')
         saved += 1
     return saved, skipped
