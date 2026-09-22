@@ -10,7 +10,7 @@ Source code: https://github.com/erikvw/download-gmail-pdfs
 Setup
 -----
 
-Reads account credentials from a JSON file. Set the path via the `GMAIL_ACCOUNTS_FILE`
+Reads account credentials from a JSON file. Currently only works with gmail App passwords. Set the path via the `GMAIL_ACCOUNTS_FILE`
 env var or the `--accounts-file` argument.
 
 Accounts file format (e.g. `.gmail_accounts.json`):
@@ -49,7 +49,6 @@ Features
 - Reconnects automatically on transient network errors (up to 3 retries).
 
 After running this, see the management command `import_labs` in clinicedc.
-
 
 .. |pypi| image:: https://img.shields.io/pypi/v/download-gmail-pdfs.svg
     :target: https://pypi.python.org/pypi/download-gmail-pdfs
