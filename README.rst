@@ -25,10 +25,6 @@ Accounts file format (e.g. `.gmail_accounts.json`):
 Usage
 -----
 
-.. code-block:: bash
-
-    export GMAIL_ACCOUNTS_FILE=/path/to/accounts.json
-
 Run for all email accounts in the JSON
 
 .. code-block:: bash
