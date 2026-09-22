@@ -31,7 +31,7 @@ Run for all email accounts in the JSON
 
     uv run --dev download-gmail-pdfs \
       --output-dir /path/to/pdf_downloads \
-      --accounts-file ~/.clinicedc/my_edc/.gmail_accounts.json
+      --accounts-file /path/to/.gmail_accounts.json
 
 Run for one email account in the JSON
 
@@ -40,7 +40,7 @@ Run for one email account in the JSON
     uv run --dev download-gmail-pdfs \
       --email account1@gmail.com \
       --output-dir /path/to/pdf_downloads \
-      --accounts-file ~/.clinicedc/my_edc/.gmail_accounts.json
+      --accounts-file /path/to/.gmail_accounts.json
 
 Features
 --------
